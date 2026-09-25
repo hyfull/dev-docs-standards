@@ -12,7 +12,7 @@
    ```
 
 3. 在生成的项目中填写真实信息；将 `.copier-answers.yml` 与项目文件一起提交。
-4. 在项目根目录运行 `python scripts/check_docs.py --root <项目目录>`，或使用模板自带的 GitHub Actions 检查。
+4. 生成项目的 GitHub Actions 会调用中央检查器。本地检查时，在本规范仓库运行 `python scripts/check_docs.py --root <项目目录> --standard-version v1.1.0`。
 5. 模板发布新版本后，在**干净的项目工作区**运行 `copier update`，审阅差异和可能的冲突，再提交项目变更。
 
 模板配置使用 `_subdirectory: template`，因此 Copier 只向项目输出 `template/` 下的文件；规范正文和工具源码不会作为项目文档复制过去。项目的 CI 通过本仓库的可复用 Action 调用中央检查器。
