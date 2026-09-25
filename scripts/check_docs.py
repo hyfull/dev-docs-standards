@@ -29,7 +29,7 @@ DECISION_FILENAME = re.compile(r"[0-9]{4}-[a-z0-9]+(?:-[a-z0-9]+)*\.md\Z")
 LINK = re.compile(r"!?\[[^\]]*\]\((<[^>]+>|[^)]+)\)")
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 STANDARD_LINK = re.compile(
-    r"https://github\.com/Rotic-h/dev-docs-standards/blob/"
+    r"https://github\.com/hyfull/dev-docs-standards/blob/"
     r"(?P<version>v[0-9]+\.[0-9]+\.[0-9]+)/guidelines/documentation\.md"
 )
 

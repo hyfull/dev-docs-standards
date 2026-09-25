@@ -8,5 +8,5 @@ project_name:
 
 standard_version:
   type: str
-  default: v1.1.0
+  default: v1.2.0
   help: 本项目采用的文档规范版本

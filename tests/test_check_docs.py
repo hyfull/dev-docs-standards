@@ -10,7 +10,7 @@ from check_docs import check  # noqa: E402
 
 
 STANDARD = (
-    "https://github.com/Rotic-h/dev-docs-standards/"
+    "https://github.com/hyfull/dev-docs-standards/"
     "blob/v1.0.0/guidelines/documentation.md"
 )
 
@@ -53,6 +53,18 @@ class CheckDocsTests(unittest.TestCase):
     def test_version_mismatch(self) -> None:
         errors = check(self.root, "v1.1.0")
         self.assertTrue(any("版本不一致" in error for error in errors))
+
+    def test_other_standard_source_rejected(self) -> None:
+        contribution = self.root / "docs/CONTRIBUTING.md"
+        contribution.write_text(
+            contribution.read_text(encoding="utf-8").replace(
+                "https://github.com/hyfull/dev-docs-standards/",
+                "https://github.com/Rotic-h/dev-docs-standards/",
+            ),
+            encoding="utf-8",
+        )
+        errors = check(self.root, "v1.0.0")
+        self.assertTrue(any("须恰好引用一次" in error for error in errors))
 
     def test_orphan_and_broken_link(self) -> None:
         self.write(

@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Rotic-h/dev-docs-standards/.github/actions/docs-check@{{ standard_version }}
+      - uses: hyfull/dev-docs-standards/.github/actions/docs-check@{{ standard_version }}
         with:
           standard-version: {{ standard_version }}
