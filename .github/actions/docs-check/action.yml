@@ -1,0 +1,12 @@
+name: 文档规范检查
+description: 使用中央规范检查项目文档的元数据、目录、命名与本地链接
+inputs:
+  standard-version:
+    description: 项目引用的规范发布版本
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: 检查项目文档
+      shell: bash
+      run: python3 "${{ github.action_path }}/../../../scripts/check_docs.py" --root "${{ github.workspace }}" --standard-version "${{ inputs.standard-version }}"

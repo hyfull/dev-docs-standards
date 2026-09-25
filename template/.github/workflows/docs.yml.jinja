@@ -1,0 +1,24 @@
+name: 文档检查
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "AGENTS.md"
+      - ".github/workflows/docs.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "AGENTS.md"
+      - ".github/workflows/docs.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Rotic-h/dev-docs-standards/.github/actions/docs-check@{{ standard_version }}
+        with:
+          standard-version: {{ standard_version }}
