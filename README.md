@@ -4,11 +4,11 @@
 
 ## 使用方式
 
-1. 阅读 [文档规范](./guidelines/documentation.md)，按需查看 [Diátaxis](./guidelines/diataxis.md)、[架构文档](./guidelines/architecture.md) 和 [ADR](./guidelines/adr.md) 的简明说明。
+1. 阅读 [文档规范](./guidelines/documentation.md)，按需查看 [Diátaxis](./guidelines/diataxis.md)、[架构文档](./guidelines/architecture.md)、[ADR](./guidelines/adr.md) 和[单篇文档模板](./document-templates/README.md)。
 2. 新项目使用 Copier 生成文档骨架：
 
    ```bash
-   copier copy --vcs-ref v1.0.0 gh:Rotic-h/dev-docs-standards my-new-project
+   copier copy --vcs-ref v1.1.0 gh:Rotic-h/dev-docs-standards my-new-project
    ```
 
 3. 在生成的项目中填写真实信息；将 `.copier-answers.yml` 与项目文件一起提交。

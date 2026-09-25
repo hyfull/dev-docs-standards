@@ -6,7 +6,7 @@
 
 ## 入口与类型
 
-项目根目录 `README.md` 介绍项目和启动入口；`docs/README.md` 是文档导航；`docs/CONTRIBUTING.md` 只记录所用规范版本、链接和项目特例。按实际需要创建下面的目录，不为填满目录而写空文档。
+项目根目录 `README.md` 介绍项目和启动入口；`docs/README.md` 是文档导航；`docs/CONTRIBUTING.md` 只记录所用规范版本、链接和项目特例。新建单篇文档可取用[中央模板](../document-templates/README.md)。按实际需要创建下面的目录，不为填满目录而写空文档。
 
 | 类型 | 用途 | 默认位置 |
 | --- | --- | --- |
